@@ -13,11 +13,14 @@ class SpotCheck3 extends Component {
         }
     }
 
-    likeQuote = quoteId => {
-
-        //Update the state accordingly based on quoteId
-
-    }
+    likeQuote = quoteID => {
+        let currentQuotes = [...this.state.quotes]
+        currentQuotes.find(q => q.id === quoteID).likes++
+    
+        this.setState({
+          quotes: currentQuotes
+        })
+      }
 
     //Load instances of `Quote` instead of rendering a `div`, and make sure to pass the correct props: 
     //a quote object and the `likeQuote` method

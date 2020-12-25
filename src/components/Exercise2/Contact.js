@@ -4,8 +4,7 @@ class Contact extends Component {
   render() {
     return (
       <div >
-        {/* should render a "name" recieved in props */}
-        {/* Should also reieve the displayConvo prop, and call the function onClick */}
+        <span>{this.props.name}</span>
       </div>
     );
   }
